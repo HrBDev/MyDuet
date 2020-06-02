@@ -3,15 +3,25 @@
 public class Movement : MonoBehaviour {
     private float _width;
     [SerializeField] private float speed = 185;
-
+    [SerializeField] private float dotSpeed = 2;
     private void Start() {
         _width = Screen.width / 2.0f;
     }
 
     private void Update() {
+        DotMovement();
         Mouse();
         Touch();
         KeyBoard();
+    }
+
+    private void DotMovement() {
+        var position = transform.position;
+        position = Vector3.Lerp(position, position + new Vector3(0, dotSpeed, 0), Time.deltaTime);
+        transform.position = position;
+        var camPos = Camera.main.transform.position;
+        camPos = Vector3.Lerp(camPos, camPos + new Vector3(0, dotSpeed, 0), Time.deltaTime);
+        Camera.main.transform.position = camPos;
     }
 
     private void Touch() {
