@@ -47,9 +47,8 @@ public class Movement : MonoBehaviour {
     }
 
     private void KeyBoard() {
-        if (Input.GetKey(KeyCode.A))
-            RotateLeft();
-        else if (Input.GetKey(KeyCode.D)) RotateRight();
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) RotateLeft();
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) RotateRight();
     }
 
     private void RotateLeft() => transform.Rotate(Vector3.forward, speed * Time.deltaTime);

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b103741b3e594761ac193322552ba9ae
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - onGameWon: {fileID: 11400000, guid: b805260323de59748b23e72cc8be63ef, type: 2}
+  - onGameLost: {fileID: 11400000, guid: d0788c41e5930324f88c0e5467a33b97, type: 2}
+  - onLevelStart: {fileID: 11400000, guid: 7f220529b7ce68d4db2953aef58bad0a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

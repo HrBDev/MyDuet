@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CollisionDetection : MonoBehaviour {
-    private void OnTriggerEnter2D(Collider2D other) {
-        SceneManager.LoadScene("SampleScene");
+    public GameEvent onGameWon;
+    public GameEvent onGameLost;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Finish"))
+            onGameWon.TriggerEvent();
+        else
+            onGameLost.TriggerEvent();
     }
 }
